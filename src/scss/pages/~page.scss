@@ -1,0 +1,30 @@
+.page {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  min-height: dvh(100);
+  background-color: var(--color-body);
+  color: var(--color-black);
+
+  .ios & {
+    /* stylelint-disable-next-line value-no-vendor-prefix */
+    min-height: -webkit-fill-available;
+  }
+
+  &__core {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+
+  .menu-open & {
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      backdrop-filter: blur(5px);
+      background: #29292999;
+    }
+  }
+}

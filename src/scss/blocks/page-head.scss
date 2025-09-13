@@ -1,0 +1,10 @@
+.page-head {
+  padding-top: fluid(90, 30);
+  padding-bottom: fluid(60, 20);
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(12);
+    }
+  }
+}

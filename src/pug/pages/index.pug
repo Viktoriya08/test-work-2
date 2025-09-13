@@ -1,0 +1,58 @@
+extends ../components/layouts/main-layout
+
+block variables
+  -
+    title = 'Главная'
+
+block main
+  main.page
+
+    +page-head({title: 'Об университете', bread: 'Об университете'})
+
+    section.section-content
+      .wrapper
+        .section-content__box
+          .section-content__head.fadeInRight
+            h2 Российский биотехнологический университет <br>
+              span.text-green-500 Приемная комиссия <br>
+              | Поступи прямо сейчас
+
+          article.section-content__video.video
+            .video__bg
+              +pic({
+                name: 'video-bg',
+                format: 'webp',
+                path: 'content',
+                lazy: 'lazy',
+                sources: [
+                  {
+                  name: 'video-bg-mob',
+                  format: 'webp',
+                  media: `(max-width:${MEDIA.smartphone}px)`}
+                ]}).video__img
+              button(type="button" aria-label="включить видео").video__play
+                +icn({name: 'play', width: '30'}).video__play-icon
+
+          article.section-content__content
+            h2 Что такое
+              span.text-green-300  РОСБИОТЕХ?
+
+            p РОСБИОТЕХ — государственный университет, один из крупнейших в стране. Мы меняем мир через биотехнологии и здоровьесбережение, создавая инновации для успешного будущего.
+              | <br> Это уникальное пространство, где фундаментальные знания, инновационные технологии и современные подходы к образованию открывают широкие горизонты для реализации твоего потенциала. Мы формируем профессионалов нового поколения, способных эффективно решать актуальные задачи настоящего и будущего.
+
+            .section-content__pictures
+              +pic({
+                name: '1',
+                format: 'webp',
+                path: 'content',
+                lazy: 'lazy'})
+              +pic({
+                name: '2',
+                format: 'webp',
+                path: 'content',
+                lazy: 'lazy'})
+
+block modals
+
+  +modal({id: 'modal-burger', mod: 'burger'})
+    +modal-burger()

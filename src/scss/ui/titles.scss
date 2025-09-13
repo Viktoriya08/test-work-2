@@ -1,0 +1,23 @@
+.title {
+  --t-font-weight: 600;
+  --t-text-transform: uppercase;
+  font-weight: var(--t-font-weight);
+  text-transform: var(--t-text-transform);
+  text-wrap: balance;
+
+  span {
+    color: var(--color-primary-500);
+  }
+
+  &--h1 {
+    font-size: fluid(42, 24);
+    line-height: 1.2;
+  }
+
+  &--h2 {
+    --t-font-weight: 800;
+    --t-line-height: var(--line-height-s);
+    --t-text-transform: uppercase;
+    @include fluid(font-size, 36, 20);
+  }
+}

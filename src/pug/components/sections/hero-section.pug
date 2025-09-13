@@ -1,0 +1,34 @@
+mixin hero-section(props = {})
+
+  section.hero-section&attributes(attributes)
+    .wrapper.hero-section__wrapper
+
+      .hero-section__content
+        h1.title.title--h1.fadeInRight <span>Lorem ipsum</span> dolor sit amet consectetur <span>adipiscing</span>
+
+        .hero-section__text.fadeInLeft
+          h5 At vero eos et accusamus et iusto odio dignissimos ducimus!
+          ul
+            li Totam rem aperiam eaque ipsa
+            li Sit voluptatem accusantium doloremque laudantium
+            li Sed ut perspiciatis, unde omnis iste natus error
+
+        .hero-section__btns.fadeInUp
+          +btn({var: 'btn--color-primary'})(data-open-modal="#modal-feedback") заказать
+          +btn({var: 'btn--color-revert'}) подробнее
+
+    +pic({
+      name: 'hero',
+      format: 'webp',
+      path: 'content',
+      lazy: 'lazy',
+      sources: [
+        {
+        name: 'hero-mob',
+        format: 'webp',
+        media: `(max-width:${MEDIA.smartphone}px)`},
+        {
+        name: 'hero-tab',
+        format: 'webp',
+        media: `(max-width:${MEDIA.notebook}px)`},
+      ]}).hero-section__pic

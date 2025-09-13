@@ -1,0 +1,71 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(10);
+
+  padding: 0;
+  background-color: transparent;
+  color: var(--color-black);
+  border: none;
+
+  transition: color .3s ease, border-color .3s ease, background-color .3s ease;
+
+  cursor: pointer;
+
+  // states
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    color: var(--color-primary-500);
+  }
+
+  &:hover:not(:disabled),
+  &:hover:not(.is-disabled) {
+    color: var(--color-primary-500);
+    cursor: pointer;
+  }
+
+  &:active,
+  &.is-active {
+    outline: none;
+    color: var(--color-primary-500);
+  }
+
+  &:disabled,
+  &.is-disabled {
+    color: var(--color-neutral-500);
+
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+  svg {
+    color: inherit;
+  }
+
+  &__svg {
+    width: rem(18);
+    height: rem(18);
+  }
+
+  &__text {
+    color: inherit;
+  }
+
+  // vars
+
+  &--icon {
+    width: rem(15);
+    height: rem(15);
+  }
+
+  &--color {
+    &-neutral {
+      color: var(--color-neutral-600);
+    }
+  }
+}
