@@ -322,7 +322,6 @@ html {
   height: 100%;
   overscroll-behavior: none;
   font-size: 16px;
-  text-rendering: optimizeLegibility;
 }
 body {
   height: 100%;
@@ -498,7 +497,7 @@ select:-webkit-autofill:focus {
   outline: 1px solid var(--color-primary-400);
   color: var(--color-primary-600);
 }
-.default-slider__btn:disabled, .default-slider__btn.is-disabled {
+.default-slider__btn[disabled], .default-slider__btn.is-disabled {
   pointer-events: none;
   opacity: 0.6;
 }
@@ -603,6 +602,21 @@ select:-webkit-autofill:focus {
 .base-input {
   position: relative;
 }
+.base-input::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  top: calc(100% - 1px);
+  left: 0;
+  background-color: var(--color-primary-600);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.base-input:focus-within:after {
+  opacity: 1;
+}
 .base-input__input {
   font-size: 1rem;
   line-height: 1.375rem;
@@ -638,10 +652,7 @@ select:-webkit-autofill:focus {
   line-height: 1rem;
   transform: translateY(0);
 }
-.base-input__input:not(:-moz-placeholder-shown) {
-  border-color: var(--color-primary-500);
-}
-.base-input__input:focus, .base-input__input:focus-visible, .base-input__input:not(:placeholder-shown) {
+.base-input__input:focus, .base-input__input:focus-visible {
   border-color: var(--color-primary-500);
 }
 .base-input__input:valid ~ .base-input__clear {
@@ -698,14 +709,11 @@ select:-webkit-autofill:focus {
   height: 100%;
 }
 .base-input.is-error::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
+  opacity: 1;
+  height: 1px;
+}
+.base-input.is-error:focus-within:after {
   height: 2px;
-  top: calc(100% - 1px);
-  left: 0;
-  background-color: var(--color-negative);
 }
 .base-input.is-error .base-input__error {
   opacity: 1;
@@ -727,7 +735,7 @@ select:-webkit-autofill:focus {
   transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
 }
-.btn:focus {
+.btn:focus:not([disabled]) {
   outline: 1px solid var(--color-primary-600);
 }
 .btn:focus-visible {
@@ -739,13 +747,21 @@ select:-webkit-autofill:focus {
     cursor: pointer;
   }
 }
-.btn:active, .btn.is-active {
+.btn:active:not([disabled]), .btn.is-active:not([disabled]) {
   outline: 1px solid var(--color-primary-600);
   background-color: var(--color-primary-600);
 }
 .btn:disabled, .btn.is-disabled {
-  cursor: not-allowed;
   opacity: 0.6;
+  pointer-events: none;
+}
+.btn[disabled] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.btn[disabled]:focus-visible {
+  outline: none;
+  background-color: var(--color-primary-500);
 }
 .btn__text {
   color: inherit;
@@ -1160,7 +1176,7 @@ a:not([class]):active, a:not([class]).is-active, a:not([class]):focus, a:not([cl
 }
 .faq__btn:disabled, .faq__btn.is-disabled {
   color: var(--color-neutral-500);
-  cursor: not-allowed;
+  pointer-events: none;
   opacity: 0.7;
 }
 @media only screen and (max-width: calc(47.9375rem)) {
@@ -1175,6 +1191,10 @@ a:not([class]):active, a:not([class]).is-active, a:not([class]):focus, a:not([cl
   gap: 1rem;
   cursor: pointer;
   transition: color 0.3s;
+}
+.faq__head:has(.faq__btn[disabled]) {
+  pointer-events: none;
+  color: var(--color-neutral-500);
 }
 @media (hover: hover) {
   .faq__head:hover {

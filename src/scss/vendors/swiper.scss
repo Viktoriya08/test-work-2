@@ -87,7 +87,7 @@
       color: var(--color-primary-600);
     }
 
-    &:disabled,
+    &[disabled],
     &.is-disabled {
 
       pointer-events: none;
