@@ -68,6 +68,7 @@ main {
   padding: 0;
   outline: 0;
   vertical-align: baseline;
+  font-weight: normal;
 }
 
 article,
@@ -101,7 +102,7 @@ body {
   text-align: left;
   background-color: var(--color-white);
   color: var(--color-text-primary);
-  font: 400 var(--font-size) / var(--font-lh) var(--font-family);
+  font: 400 var(--font-size) / var(--font-lh) var(--font-family-primary);
 }
 
 [data-theme='dark'] {
@@ -144,13 +145,16 @@ a:active {
 a,
 area,
 button,
-input:not([type='range']),
+input,
 label,
 select,
 textarea,
 .btn {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 // content
@@ -216,7 +220,7 @@ optgroup,
 button {
   color: inherit;
   font-family: inherit;
-  line-height: var(--font-lh);
+  line-height: var(--line-height-xs);
   font-size: 100%;
   margin: 0;
   vertical-align: baseline;

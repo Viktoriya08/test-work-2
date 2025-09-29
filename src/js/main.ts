@@ -1,24 +1,31 @@
-import { setScrollWidth } from './utils/scroll-width'
+// import { setScrollWidth } from './utils/scroll-width'
 import { iosFixes } from './utils/ios-fixes'
-import { initModals } from './modules/init-modals'
-import { initTheme } from './modules/init-theme'
-import { calcHeaderHeight } from "./utils/calc-header-height"
+// import { initModals } from './modules/init-modals'
+// import { initTheme } from './modules/init-theme'
+// import { calcHeaderHeight } from "./utils/calc-header-height"
 import initAnimations from "./modules/init-animations"
-import initMenu from "./modules/init-menu"
-import Dropdown from "./modules/init-dropdown";
+// import initMenu from "./modules/init-menu"
+import Dropdown from "./modules/init-dropdown"
+import { initMask } from "./modules/init-mask";
+import { initCarousels } from './modules/init-carousels'
+import { initFormsNew } from "./modules/init-forms";
 
 // DOM loaded
 window.addEventListener('DOMContentLoaded', () => {
-  setScrollWidth()
+  // setScrollWidth()
   iosFixes()
-  initTheme()
-  calcHeaderHeight()
+  // initTheme()
+  // calcHeaderHeight()
   initAnimations()
-  initMenu(".js-menu", ".header__submenu")
+  // initMenu(".js-menu", ".header__submenu")
   new Dropdown('[data-dropdown]')
+  initMask()
+  initCarousels()
+  initFormsNew()
+
 })
 
 // All resources loaded
 window.addEventListener('load', () => {
-  initModals()
+  // initModals()
 })

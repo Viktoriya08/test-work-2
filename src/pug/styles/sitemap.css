@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: var(--font-family);
+  font-family: var(--font-family-primary);
   background: #eee;
 }
 
@@ -15,7 +15,13 @@ body {
   gap: 80px;
   min-height: 100dvh;
   padding: 50px 20px;
-  background: var(--color-primary-trans-50);
+  background: rgb(137 134 132 / 19%);
+}
+
+.wrapper-logo {
+  width: 100%;
+  max-width: 80%;
+  margin: auto;
 }
 
 .wrapper {
@@ -45,10 +51,8 @@ body {
 
 h1 {
   display: block;
-  cursor: default;
   font-weight: 700;
   margin-bottom: 120px;
-  font-size: 36px;
 }
 
 li {

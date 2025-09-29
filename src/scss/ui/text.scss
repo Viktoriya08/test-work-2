@@ -1,19 +1,11 @@
 p:not([class]) {
-  font-size: fluid(16, 14);
-  line-height: fluid(31, 22);
+  font-size: rem(16);
+  line-height: rem(22);
 
   &:not(:last-child) {
     margin-bottom: rem(20);
   }
 
-}
-
-.text-green-500 {
-  color: var(--color-primary-500);
-}
-
-.text-green-300 {
-  color: var(--color-primary-300);
 }
 
 h2:not([class]), h3:not([class]), h4:not([class]), h5:not([class]), h6:not([class]) {
@@ -35,32 +27,12 @@ h2:not([class]) {
   font-size: fluid(40, 20);
 }
 
-h5:not([class]) {
-  @include fluid(font-size, 20, 16);
-  font-weight: 700;
-}
+a:not([class]) {
+  color: var(--color-primary-500);
 
-ul:not([class]) {
-  @include fluid(font-size, 20, 16);
-  font-weight: 400;
-
-  li {
-    padding-left: rem(24);
-    position: relative;
-
-    &:not(:last-child) {
-      margin-bottom: rem(5);
-    }
-    &::before {
-      content: '';
-      display: block;
-      width: rem(5);
-      height: rem(2);
-      background-color: var(--color-black);
-      position: absolute;
-      top: 50%;
-      left: rem(10);
-      transform: translateY(-50%);
+  @include media(hover) {
+    &:hover {
+      color: var(--color-primary-600);
     }
   }
 }

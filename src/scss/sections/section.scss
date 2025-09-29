@@ -1,0 +1,44 @@
+.section {
+  padding-bottom: rem(100);
+  @include media(notebook-after) {
+    padding-bottom: rem(80);
+  }
+
+  @include media(tablet-after) {
+    padding-bottom: rem(40);
+  }
+
+  &:first-child {
+    padding-top: rem(72);
+    @include media(notebook-after) {
+        padding-top: rem(64);
+      }
+
+    @include media(tablet-after) {
+      padding-top: rem(40);
+    }
+  }
+
+  &:last-child {
+    padding-bottom: rem(72);
+    @include media(notebook-after) {
+        padding-bottom: rem(64);
+      }
+
+    @include media(tablet-after) {
+      padding-bottom: rem(40);
+    }
+  }
+
+  &__btn-order {
+    margin: 0 auto;
+    display: flex;
+    min-width: rem(330);
+    width: fit-content;
+
+    @include media(tablet-after) {
+      min-width: 100%;
+      width: 100%;
+    }
+  }
+}

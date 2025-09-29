@@ -4,7 +4,7 @@
 
 **Верстка** - [https://viktoriya08.github.io/test-work-2/](https://viktoriya08.github.io/test-work-2/)
 
-**Макет** - [https://www.figma.com/design/HvkvEax2RvGdx71a2RS2nz/%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BC%D0%B0%D0%BA%D0%B5%D1%82?node-id=7-509&t=KixeOP7bS4t0iZau-0](https://www.figma.com/design/HvkvEax2RvGdx71a2RS2nz/%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BC%D0%B0%D0%BA%D0%B5%D1%82?node-id=7-509&t=KixeOP7bS4t0iZau-0)
+**Макет** - [https://www.figma.com/design/o0mJkLUbaM0pdeMQIZ3gdj/Test-Task---Solar?node-id=0-1&p=f&t=bj4vW703AczRmjm0-0](https://www.figma.com/design/o0mJkLUbaM0pdeMQIZ3gdj/Test-Task---Solar?node-id=0-1&p=f&t=bj4vW703AczRmjm0-0)
 
 ## Начало работы
 

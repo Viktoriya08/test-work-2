@@ -1,6 +1,6 @@
 doctype html
 -
-  let title = 'Новые технологии'
+  let title = 'Solar appScreener'
   let hasHeader = true
   let hasFooter = true
   let pageMods = ''
@@ -27,7 +27,7 @@ include ../_auto-import
 
 html(lang="ru")
   head
-    title= `test - ${title}`
+    title= `Solar - ${title}`
     meta(name="description" content="test template")
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
@@ -58,7 +58,7 @@ html(lang="ru")
     meta(name="format-detection" content="address=no")
 
     //- Preload resources
-    link(rel="preload" href="fonts/montserrat/Montserrat-Regular.woff2" as="font" crossorigin="anonymous")
+    //- link(rel="preload" href="fonts/montserrat/Montserrat-Regular.woff2" as="font" crossorigin="anonymous" fetchpriority="high")
 
     link(rel="stylesheet" href="/src/scss/style.scss")
 

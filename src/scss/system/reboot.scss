@@ -16,15 +16,6 @@ body {
   font-size: rem(16);
 }
 
-a {
-  text-underline-offset: 0.2em;
-  color: var(--color-link);
-
-  &:hover {
-    color: var(--link-color-hover);
-  }
-}
-
 /* перебить стили автозаполнения */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -36,7 +27,6 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border: 0;
   -webkit-text-fill-color: #ссс;
   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
   transition: background-color 5000s ease-in-out 0s;
@@ -52,9 +42,9 @@ select:-webkit-autofill:focus {
 
 // цвет выделенного текста
 *::selection {
-  background: #3e9ddc93; /* Safari */
+  background: #fe6f3649; /* Safari */
   }
 
 *::-moz-selection {
-  background: #3e9ddc93; /* Firefox */
+  background: #fe6f3646; /* Firefox */
 }

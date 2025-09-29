@@ -4,10 +4,6 @@
   align-items: center;
   gap: rem(10);
 
-  &--svg &__img {
-    max-width: rem(192);
-  }
-
   &__img {
     display: flex;
     align-items: center;
@@ -27,13 +23,5 @@
     @include media(notebook-after) {
       width: rem(48);
     }
-  }
-
-  &__text {
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: fluid(14, 10);
-    line-height: rem(19);
-    letter-spacing: 0.96px;
   }
 }

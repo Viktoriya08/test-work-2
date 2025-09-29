@@ -12,19 +12,4 @@
     /* stylelint-disable-next-line value-no-vendor-prefix */
     min-height: -webkit-fill-available;
   }
-
-  &__core {
-    width: 100%;
-    flex: 0 0 auto;
-  }
-
-  .menu-open & {
-    &::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      backdrop-filter: blur(5px);
-      background: #29292999;
-    }
-  }
 }

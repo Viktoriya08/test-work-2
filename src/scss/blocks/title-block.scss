@@ -1,0 +1,43 @@
+.title-block {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+
+  @include media(notebook-after) {
+    gap: rem(32);
+  }
+
+  @include media(tablet-after) {
+    gap: rem(16);
+  }
+  &:not(:last-child) {
+    margin-bottom: rem(80);
+
+    @include media(notebook-after) {
+      margin-bottom: rem(56);
+    }
+
+    @include media(tablet-after) {
+      margin-bottom: rem(32);
+    }
+  }
+  &--margin {
+    &:not(:last-child) {
+      margin-bottom: rem(56);
+
+      @include media(tablet-after) {
+        margin-bottom: rem(32);
+      }
+
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &--top-b {
+    border-top: 1px solid var(--color-neutral-500);
+    padding-top: rem(16);
+  }
+}

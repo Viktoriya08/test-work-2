@@ -4,6 +4,7 @@ import { formatBytes } from '../helpers/string-helpers'
 import { formErrors } from '../data/lang'
 
 const addRules = (form: HTMLElement, validator: JustValidate): void => {
+  console.log(123)
   const elements: NodeListOf<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement> = form.querySelectorAll('input:not([type="hidden"], :disabled), textarea, select, .select:not(.is-disabled)')
 
   const parseAttribute = (el: HTMLElement, attr: string): number | false => {
@@ -28,6 +29,7 @@ const addRules = (form: HTMLElement, validator: JustValidate): void => {
     const maxSize: number | false = element.dataset.maxSize ? +element.dataset.maxSize : false
 
     const reqTextError = element.getAttribute('data-error')
+    console.log(reqTextError)
 
     const rulesList: object[] = []
 

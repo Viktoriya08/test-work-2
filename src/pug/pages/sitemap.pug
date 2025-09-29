@@ -17,11 +17,12 @@ block main
     include ../styles/sitemap.css
 
   main.container
-    .logo
-      img(src="/img/content/logo.svg" alt="").logo__img
+    .wrapper-logo
+      .logo
+        img(src="/img/content/logo.svg" alt="").logo__img
     .wrapper
-      h1 Тестовое задание Гнездиловой Виктории
+      h1.fadeInUp.title.title--fluid Тестовое задание Гнездиловой Виктории
       ol
         each page in pages
-          li
+          li.fadeInRight
             a(href=`${page.src}.html`)= `${page.name} - ${page.src}.html`

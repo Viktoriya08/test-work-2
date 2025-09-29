@@ -10,11 +10,6 @@
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--main-padding);
-
-  @include media(fullhd-before) {
-    max-width: 100%;
-    width: min(calc(80% - (var(--main-padding)*2) ) );
-  }
 }
 
 .layout {

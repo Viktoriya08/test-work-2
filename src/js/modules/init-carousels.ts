@@ -1,6 +1,7 @@
 import Swiper from 'swiper'
 import { Navigation } from 'swiper/modules'
 import { hasManySlides } from '../helpers/swiper-helpers'
+import { MEDIA } from '../data/vars'
 
 export const initCarousels = () => {
   const carousels: NodeListOf<HTMLElement> = document.querySelectorAll('[data-carousel]')
@@ -23,18 +24,28 @@ export const initCarousels = () => {
     }
 
     switch (name) {
-      case 'main':
+      case 'default-slider':
         swiper = new Swiper(item, {
           modules: [Navigation],
           ...defaultOptions,
-          slidesPerView: 'auto'
+          slidesPerView: 1.25,
+          spaceBetween: 16,
+          breakpoints: {
+            [MEDIA.tablet[1]]: {
+              slidesPerView: 2,
+              spaceBetween: 24,
+            },
+            [MEDIA.desktop[1]]: {
+              slidesPerView: 3,
+            },
+          }
         })
         break
       default:
         swiper = new Swiper(item, {
           modules: [Navigation],
           ...defaultOptions,
-          slidesPerView: 1
+          slidesPerView: 1.2
         })
     }
 
