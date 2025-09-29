@@ -48,7 +48,7 @@
 
   &__btns {
     order: -1;
-    margin-left: auto;
+    margin: 1px 1px 1px auto;
     display: flex;
     align-items: center;
     gap: rem(10);
@@ -68,7 +68,7 @@
     }
 
     &:focus {
-      outline: none;
+      outline: 1px solid var(--color-primary-400);
     }
 
     &:focus-visible {
@@ -83,7 +83,7 @@
 
     &:active,
     &.is-active {
-      outline: none;
+      outline: 1px solid var(--color-primary-400);
       color: var(--color-primary-600);
     }
 

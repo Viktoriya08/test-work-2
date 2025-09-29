@@ -48,7 +48,7 @@
     }
 
     &:focus {
-      outline: none;
+      outline: 1px solid var(--color-primary-600);
     }
 
     &:focus-visible {
@@ -63,7 +63,7 @@
 
     &:active,
     &.is-active {
-      outline: none;
+      outline: 1px solid var(--color-primary-600);
       color: var(--color-primary-600);
     }
 

@@ -29,6 +29,23 @@
       }
     }
 
+    &:focus {
+      + .base-checkbox__label {
+				&::before {
+          outline: 1px solid var(--color-primary-600);
+        }
+      }
+    }
+
+    &:active,
+    &.is-active {
+      + .base-checkbox__label {
+				&::before {
+          outline: 1px solid var(--color-primary-600);
+        }
+      }
+    }
+
 		&.error {
 			+ .base-checkbox__label {
 				color: var(--color-negative);

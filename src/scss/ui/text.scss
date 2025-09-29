@@ -30,6 +30,13 @@ h2:not([class]) {
 a:not([class]) {
   color: var(--color-primary-500);
 
+  &:active,
+  &.is-active,
+  &:focus,
+  &:focus-visible {
+    outline: 1px solid var(--color-primary-600);
+  }
+
   @include media(hover) {
     &:hover {
       color: var(--color-primary-600);
