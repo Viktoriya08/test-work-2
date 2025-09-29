@@ -595,6 +595,11 @@ select:-webkit-autofill:focus {
   border-color: var(--color-negative);
   background-color: rgba(255, 0, 0, 0.274);
 }
+@media only screen and (max-width: calc(47.9375rem)) {
+  .base-checkbox__input:hover:active + .base-checkbox__label::before, .base-checkbox__input:hover.is-active + .base-checkbox__label::before, .base-checkbox__input:hover:focus + .base-checkbox__label::before {
+    outline: none;
+  }
+}
 .base-input {
   position: relative;
 }
@@ -792,6 +797,11 @@ a:not([class]):active, a:not([class]).is-active, a:not([class]):focus, a:not([cl
 @media (hover: hover) {
   a:not([class]):hover {
     color: var(--color-primary-600);
+  }
+}
+@media only screen and (max-width: calc(47.9375rem)) {
+  a:not([class]):hover:active, a:not([class]):hover.is-active, a:not([class]):hover:focus, a:not([class]):hover:focus-visible {
+    outline: none;
   }
 }
 .title {
@@ -1152,6 +1162,11 @@ a:not([class]):active, a:not([class]).is-active, a:not([class]):focus, a:not([cl
   color: var(--color-neutral-500);
   cursor: not-allowed;
   opacity: 0.7;
+}
+@media only screen and (max-width: calc(47.9375rem)) {
+  .faq__btn:hover:active, .faq__btn:hover.is-active, .faq__btn:hover:focus, .faq__btn:hover:focus-visible {
+    outline: none;
+  }
 }
 .faq__head {
   display: flex;

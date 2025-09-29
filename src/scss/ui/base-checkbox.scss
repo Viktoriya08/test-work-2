@@ -115,4 +115,18 @@
     }
   }
 
+  @include media(tablet-after){
+    &__input:hover {
+      &:active,
+      &.is-active,
+      &:focus {
+        + .base-checkbox__label {
+          &::before {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
 }
