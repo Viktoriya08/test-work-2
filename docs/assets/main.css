@@ -464,7 +464,7 @@ select:-webkit-autofill:focus {
 }
 .default-slider__btns {
   order: -1;
-  margin-left: auto;
+  margin: 1px 1px 1px auto;
   display: flex;
   align-items: center;
   gap: 0.625rem;
@@ -484,7 +484,7 @@ select:-webkit-autofill:focus {
   height: 100%;
 }
 .default-slider__btn:focus {
-  outline: none;
+  outline: 1px solid var(--color-primary-400);
 }
 .default-slider__btn:focus-visible {
   color: var(--color-primary-400);
@@ -495,7 +495,7 @@ select:-webkit-autofill:focus {
   }
 }
 .default-slider__btn:active, .default-slider__btn.is-active {
-  outline: none;
+  outline: 1px solid var(--color-primary-400);
   color: var(--color-primary-600);
 }
 .default-slider__btn:disabled, .default-slider__btn.is-disabled {
@@ -526,6 +526,12 @@ select:-webkit-autofill:focus {
   cursor: not-allowed;
   filter: grayscale(100%);
   opacity: 0.5;
+}
+.base-checkbox__input:focus + .base-checkbox__label::before {
+  outline: 1px solid var(--color-primary-600);
+}
+.base-checkbox__input:active + .base-checkbox__label::before, .base-checkbox__input.is-active + .base-checkbox__label::before {
+  outline: 1px solid var(--color-primary-600);
 }
 .base-checkbox__input.error + .base-checkbox__label {
   color: var(--color-negative);
@@ -714,7 +720,7 @@ select:-webkit-autofill:focus {
   cursor: pointer;
 }
 .btn:focus {
-  outline: none;
+  outline: 1px solid var(--color-primary-600);
 }
 .btn:focus-visible {
   background-color: var(--color-primary-400);
@@ -726,7 +732,7 @@ select:-webkit-autofill:focus {
   }
 }
 .btn:active, .btn.is-active {
-  outline: none;
+  outline: 1px solid var(--color-primary-600);
   background-color: var(--color-primary-600);
 }
 .btn:disabled, .btn.is-disabled {
@@ -776,6 +782,9 @@ h2:not([class]) {
 }
 a:not([class]) {
   color: var(--color-primary-500);
+}
+a:not([class]):active, a:not([class]).is-active, a:not([class]):focus, a:not([class]):focus-visible {
+  outline: 1px solid var(--color-primary-600);
 }
 @media (hover: hover) {
   a:not([class]):hover {
@@ -1123,7 +1132,7 @@ a:not([class]) {
   transform: rotate(45deg);
 }
 .faq__btn:focus {
-  outline: none;
+  outline: 1px solid var(--color-primary-600);
 }
 .faq__btn:focus-visible {
   color: var(--color-primary-600);
@@ -1133,7 +1142,7 @@ a:not([class]) {
   cursor: pointer;
 }
 .faq__btn:active, .faq__btn.is-active {
-  outline: none;
+  outline: 1px solid var(--color-primary-600);
   color: var(--color-primary-600);
 }
 .faq__btn:disabled, .faq__btn.is-disabled {
